@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho Praticot</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="centro">
+      <h2 align="center">Trabalho Prático 1</h2>
+      <div class="conteudo">
+        <table>
+          <tr>
+            <td>Vermelho</td>
+            <td>
+              <input
+                type="range"
+                min="0"
+                max="255"
+                value="0"
+                id="range-r"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                id="field-r"
+                value="0"
+                disabled
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Verde</td>
+            <td>
+              <input
+                type="range"
+                min="0"
+                max="255"
+                value="0"
+                id="range-g"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                id="field-g"
+                value="0"
+                disabled
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Azul</td>
+            <td>
+              <input
+                type="range"
+                min="0"
+                max="255"
+                value="0"
+                class="campo"
+                id="range-b"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                id="field-b"
+                value="0"
+                disabled
+              />
+            </td>
+          </tr>
+        </table>
+        <div class="col-md-2">
+          <div class="square"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

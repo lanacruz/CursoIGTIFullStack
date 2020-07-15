@@ -1,0 +1,38 @@
+.square {
+  background-color: rgb(0, 0, 0);
+  width: 387px;
+  height: 105px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #cccccc;
+}
+
+.centro {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+.conteudo {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+tr,
+td,
+table {
+  background-color: #dd8585;
+}
+h2 {
+  background-color: #dd8585;
+  width: 387px;
+  height: 80px;
+  display: block;
+  margin: 0 20px 0 632px;
+  border: 1px solid #cccccc;
+}
