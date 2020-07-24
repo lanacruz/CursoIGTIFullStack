@@ -10,7 +10,8 @@ Para execução do código é necessário subir um servidor local com o resultad
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server1": "json-server --watch user.json --port 3001"
-  },```
+  },
+  ```
   
   
  #Atividades
