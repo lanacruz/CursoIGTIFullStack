@@ -1,4 +1,4 @@
-#Instruções 
+# Instruções 
 Para execução do código é necessário subir um servidor local com o resultado da API. 
 1) abrir a pasta "backend" no cdm
 2) executar os comandos 
@@ -14,7 +14,7 @@ Para execução do código é necessário subir um servidor local com o resultad
   ```
   
   
- #Atividades
+# Atividades
 Os alunos deverão desempenhar as seguintes atividades:
 1. Na carga inicial da aplicação, obter os dados de:
 https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo
