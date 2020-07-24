@@ -1,17 +1,19 @@
+#Instruções 
 Para execução do código é necessário subir um servidor local com o resultado da API. 
 1) abrir a pasta "backend" no cdm
 2) executar os comandos 
-   a)	npm init –y
-   b)	npm install --save -dev json-server
+   - ```npm init –y```
+   - ```npm install --save -dev json-server```
 3) ao finalizar a instalação adicionar a seguinte informação no arquivo "package.json" que foi criado automaticamente na pasta “backend”
 
+```
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server1": "json-server --watch user.json --port 3001"
-  },
+  },```
   
   
-  Atividades
+ #Atividades
 Os alunos deverão desempenhar as seguintes atividades:
 1. Na carga inicial da aplicação, obter os dados de:
 https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo
