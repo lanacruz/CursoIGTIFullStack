@@ -1,22 +1,21 @@
+<!--Trabalho realizado por Elaine Costa Cruz para o Desafio do Modulo 1
+  Curso desenvolvedor fullstack
+  Professor Raphael Gomide-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Compiled and minified CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
-
-    <title>Unit 01 - Challenge - User Search</title>
+    <link rel="stylesheet" href="./frontend/css/styles.css" />
+    <title>Desafio - Busca por nomde de Usuário</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="center-align blue-text text-darken-4">User Search</h1>
-
+      <h1 class="center-align purple-text text-darken-4">Pesquisar Usuário</h1>
       <div class="loading"></div>
 
       <form>
@@ -24,16 +23,16 @@
           <div class="col s11 m11 l11">
             <div class="input-field">
               <input type="text" id="search-terms" />
-              <label for="search-terms">Search</label>
+              <label for="search-terms">Buscar</label>
             </div>
           </div>
           <div class="col s1 m1 l1">
             <div class="search-button">
               <a
                 id="search-button"
-                class="waves-effect waves-light blue darken-4 btn-small"
+                class="waves-effect waves-light purple darken-4 btn-small"
               >
-                SEARCH
+                Buscar
               </a>
             </div>
           </div>
@@ -42,21 +41,22 @@
 
       <div class="row">
         <div class="col s8 m8 l8">
-          <div class="results-box z-depth-1 blue lighten-4">
-            <h4 id="results-summary"></h4>
+          <div class="results-box z-depth-1 purple lighten-4">
+            <h4 id="results-summary">Pessoas</h4>
             <div id="found-users"></div>
           </div>
         </div>
         <div class="col s4 m4 l4">
-          <div class="results-box z-depth-1 blue lighten-4">
-            <h4>Stats</h4>
+          <div class="results-box z-depth-1 purple lighten-4">
+            <h4>Estátisticas</h4>
             <div id="found-stats"></div>
           </div>
         </div>
       </div>
-    </div>
+     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="./frontend/js/script.js"></script>
   </body>
+</html>
 </html>

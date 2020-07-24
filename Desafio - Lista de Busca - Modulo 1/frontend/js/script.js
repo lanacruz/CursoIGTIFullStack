@@ -1,14 +1,15 @@
+/**Trabalho realizado por Elaine Costa Cruz para o Desafio do Modulo 1
+  Curso desenvolvedor fullstack
+  Professor Raphael Gomide */
 let usersList = [];
-
 let foundUsersDiv = null;
 let foundStatsDiv = null;
-
 let numberFormat = null;
 
 window.addEventListener('load', () => {
   console.log('Page loaded');
 
-  // prevent form submit
+  //impedir envio do formulario
   document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
   });
@@ -27,6 +28,21 @@ window.addEventListener('load', () => {
   handleSearch();
   render(usersList);
 });
+
+async function fetchData() {
+  const resource = await fetch('http://localhost:3001/results');
+  const json = await resource.json();
+  usersList = json.map(({ name, gender, dob, picture }) => {
+    return {
+      name: `${name.first} ${name.last}`,
+      gender,
+      age: dob.age,
+      photo: picture.thumbnail,
+    };
+  });
+
+  console.log(usersList);
+}
 
 async function fetchData() {
   const res = await fetch(
@@ -91,9 +107,9 @@ function renderFoundUsers(users) {
   let searchText = document.querySelector('#results-summary');
 
   if (users.length === 0) {
-    searchText.textContent = 'Results will appear here';
+    searchText.textContent = 'Usuários Encontrados';
   } else {
-    searchText.textContent = `${users.length} users found`;
+    searchText.textContent = `${users.length} usuários encontrados`;
 
     users.forEach((user) => {
       let userDiv = document.createElement('div');
@@ -117,7 +133,8 @@ function renderFoundStats(users) {
 
   if (users.length === 0) {
     let searchText = document.createElement('div');
-    searchText.textContent = 'No stats available for the results';
+    searchText.textContent =
+      'Nenhuma estatística disponível para os resultados';
     statsElement.appendChild(searchText);
   } else {
     // sum of female users
@@ -126,7 +143,7 @@ function renderFoundStats(users) {
       (acc, cur) => (cur.gender === 'female' ? ++acc : acc),
       0
     );
-    statsFemaleUsers.textContent = `Female users: ${femaleUsers}`;
+    statsFemaleUsers.textContent = `Usuário do sexo feminino: ${femaleUsers}`;
     statsElement.appendChild(statsFemaleUsers);
 
     // sum of male users
@@ -135,19 +152,19 @@ function renderFoundStats(users) {
       (acc, cur) => (cur.gender === 'male' ? ++acc : acc),
       0
     );
-    statsMaleUsers.textContent = `Male users: ${maleUsers}`;
+    statsMaleUsers.textContent = `Usuário do sexo Masculino: ${maleUsers}`;
     statsElement.appendChild(statsMaleUsers);
 
     // sum of all users' ages
     let statsAgeSum = document.createElement('div');
     const usersAgeSum = users.reduce((acc, cur) => acc + cur.age, 0);
-    statsAgeSum.textContent = `Sum of ages: ${usersAgeSum}`;
+    statsAgeSum.textContent = `Soma das idades: ${usersAgeSum}`;
     statsElement.appendChild(statsAgeSum);
 
     // average age for all users
     let statsAgeAvg = document.createElement('div');
     const usersAgeAvg = usersAgeSum / users.length;
-    statsAgeAvg.textContent = `Average age: ${formatNumber(
+    statsAgeAvg.textContent = `Média das Idades: ${formatNumber(
       usersAgeAvg.toFixed(2)
     )}`;
     statsElement.appendChild(statsAgeAvg);
